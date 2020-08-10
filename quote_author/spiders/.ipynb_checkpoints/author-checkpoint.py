@@ -4,6 +4,7 @@ from scrapy import Request, FormRequest
 class AuthorSpider(scrapy.Spider):
     name = 'author'
     start_url = 'http://quotes.toscrape.com/login'
+#     handle_httpstatus_list = [301]
 
     def start_requests(self):
         yield scrapy.Request(self.start_url, self.login)
